@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Outfit:wght@100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --main-font: "Figtree", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid rgb(200, 200, 200); */
+}
+
+body {
+  font-family: var(--main-font);
+  font-size: 14px;
+  max-width: 100%; /* Prevents overflow */
+  place-items: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up the full viewport height */
+}
+
+main {
+  flex: 1; /* Makes main content take up available space; Ensure the footer always sticks to the bottom of the page even if the content is short */
+  margin: 7% 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-size: 23px;
+}
+
+.seperator {
+  width: 140px;
+  margin: 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+article a {
+  display: flex;
+  gap: 2rem;
+  text-decoration: none;
+  color: black;
+  max-height: 160px;
+  align-items: center;
+}
+
+article a:hover h2 {
+  text-decoration: underline;
+}
+
+article a:hover img {
+  opacity: 0.85;
+}
+
+article img {
+  border-radius: 0.8em;
+  width: 100px;
+  height: 100px;
+}
+
+.title_date {
+  display: flex;
+  flex-direction: column;
+}
+
+.title_date h2 {
+  font-size: 14px;
+  line-height: 1.3rem;
+  margin-bottom: 0.3rem;
+  display: -webkit-box; /* Enables the flexible box model for clamping */
+  -webkit-box-orient: vertical; /* Defines the box orientation as vertical */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3; /* Limits the text to 3 lines */
+  line-clamp: 3; /* Standard property (future support in browsers) */
+}
+
+.title_date small {
+  color: rgb(80, 80, 80);
+  font-weight: 600;
+}
+
+footer {
+  padding: 1rem;
+}
+
+.author-info {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  color: rgb(55, 65, 81);
+}
+
+.author-info a {
+  text-decoration: none;
+}
+
+@media (min-width: 641px) {
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    max-width: 830px;
+  }
+
+  header {
+    max-width: 800px;
+  }
+
+  header h1 {
+    font-size: 37px;
+    line-height: 3rem;
+  }
+
+  .seperator {
+    width: 160px;
+    margin: 2.5rem;
+  }
+
+  section {
+    gap: 45px;
+  }
+
+  article a {
+    gap: 3.5rem;
+  }
+
+  article img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .title_date h2 {
+    font-size: 22px;
+    line-height: 1.75rem;
+    margin-bottom: 1rem;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+}
+
+@media (min-width: 1025px) {
+  .seperator {
+    width: 175px;
+  }
+}
